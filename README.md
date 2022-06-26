@@ -10,5 +10,5 @@
 
 ![form screen](https://github.com/krzyko59/Tic-Tac-Toe-on-full/blob/main/screen_0.png?raw=true?raw=true)</br>
 ![start game](https://github.com/krzyko59/Tic-Tac-Toe-on-full/blob/main/screen_1.png?raw=true?raw=true)</br>
-![screen 1](https://github.com/krzyko59/Tic-Tac-Toe-on-full/blob/main/screen_0.png?raw=true?raw=true)</br>
-![screen 1](https://github.com/krzyko59/Tic-Tac-Toe-on-full/blob/main/screen_0.png?raw=true?raw=true)</br>
+![screen 1](https://github.com/krzyko59/Tic-Tac-Toe-on-full/blob/main/screen_2.png?raw=true?raw=true)</br>
+![screen 1](https://github.com/krzyko59/Tic-Tac-Toe-on-full/blob/main/screen_3.png?raw=true?raw=true)</br>
