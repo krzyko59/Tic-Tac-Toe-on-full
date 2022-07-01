@@ -1,3 +1,5 @@
+#include "FormHelp.h"
+
 #pragma once
 
 namespace OXfull 
@@ -15,7 +17,8 @@ namespace OXfull
 		bool turaX = false;
 		int xWynik = 0;
 		int oWynik = 0;
-		bool isWin = false;
+	private: System::Windows::Forms::Button^ ButtonHelp;
+		   bool isWin = false;
 	public:
 		//konstruktor
 		gameForm(void)
@@ -54,6 +57,7 @@ namespace OXfull
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(gameForm::typeid));
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
+			this->ButtonHelp = (gcnew System::Windows::Forms::Button());
 			this->buttonWyczyscPlansze = (gcnew System::Windows::Forms::Button());
 			this->buttonNowaGra = (gcnew System::Windows::Forms::Button());
 			this->XWynik = (gcnew System::Windows::Forms::Label());
@@ -78,6 +82,7 @@ namespace OXfull
 			// splitContainer1.Panel1
 			// 
 			this->splitContainer1->Panel1->BackColor = System::Drawing::Color::SkyBlue;
+			this->splitContainer1->Panel1->Controls->Add(this->ButtonHelp);
 			this->splitContainer1->Panel1->Controls->Add(this->buttonWyczyscPlansze);
 			this->splitContainer1->Panel1->Controls->Add(this->buttonNowaGra);
 			this->splitContainer1->Panel1->Controls->Add(this->XWynik);
@@ -93,6 +98,18 @@ namespace OXfull
 			this->splitContainer1->Size = System::Drawing::Size(1008, 601);
 			this->splitContainer1->SplitterDistance = 115;
 			this->splitContainer1->TabIndex = 0;
+			// 
+			// ButtonHelp
+			// 
+			this->ButtonHelp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->ButtonHelp->Location = System::Drawing::Point(3, 469);
+			this->ButtonHelp->Name = L"ButtonHelp";
+			this->ButtonHelp->Size = System::Drawing::Size(109, 39);
+			this->ButtonHelp->TabIndex = 9;
+			this->ButtonHelp->Text = L"Help";
+			this->ButtonHelp->UseVisualStyleBackColor = true;
+			this->ButtonHelp->Click += gcnew System::EventHandler(this, &gameForm::ButtonHelp_Click);
 			// 
 			// buttonWyczyscPlansze
 			// 
@@ -368,5 +385,9 @@ namespace OXfull
 			this->OWynik->Text = Convert::ToString(oWynik);
 			bool isWin = false;
 		}
+private: System::Void ButtonHelp_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormHelp^ formHelp = gcnew FormHelp();
+	formHelp->Show();
+}
 };
 }
